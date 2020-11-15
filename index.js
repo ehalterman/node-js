@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const path = require('path')
-const PORT = process.env.PORT || 5000
+const port = 5000
 
 app.use(express.static(__dirname + '/public'));
 
@@ -87,11 +87,12 @@ function calculateRate(res, weight, type) {
           result = 5.90;
         }
       }
-    }
+    
     const params = {
-      weight: weight,
       method: type,
+      weight: weight,
       result: result
     };
 
-    response.render('pages/result', params);
+    res.render('pages/result', params);
+  }
