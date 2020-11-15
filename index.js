@@ -94,5 +94,5 @@ function calculateRate(res, weight, type) {
       result: result
     };
 
-    res.render('pages/views/result', params);
+    res.render('pages/index', params);
   }
